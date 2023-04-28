@@ -487,9 +487,9 @@ bool OpenGL_GLFW_Service::init(const Config& config) {
         return false;
     }
 #else
-    Display* display = XOpenDisplay(nullptr);
-    gladLoaderLoadGLX(display, DefaultScreen(display));
-    XCloseDisplay(display);
+    //Display* display = XOpenDisplay(nullptr);
+    //gladLoaderLoadGLX(display, DefaultScreen(display));
+    //XCloseDisplay(display);
 #endif
     if (m_opengl_context.major_ < 3) {
         auto ext = std::string((char const*)glGetString(GL_EXTENSIONS));

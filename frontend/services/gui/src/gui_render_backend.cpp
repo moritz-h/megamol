@@ -14,7 +14,7 @@
 #ifdef _WIN32 // Windows
 #include "glad/wgl.h"
 #else // LINUX
-#include "glad/glx.h"
+//#include "glad/glx.h"
 #endif // _WIN32
 #include "imgui_impl_opengl3.h"
 #endif // MEGAMOL_USE_OPENGL
@@ -62,16 +62,16 @@ bool megamol::gui::gui_render_backend::CheckPrerequisites(GUIRenderBackend backe
         // Display* gl_current_display = ::glXGetCurrentDisplay();
         // GLXContext ogl_current_context = ::glXGetCurrentContext();
         /// XXX Is there a better way to check existing OpenGL context?
-        if (glXGetCurrentDisplay == nullptr) {
-            megamol::core::utility::log::Log::DefaultLog.WriteError(
-                "[GUI] There is no OpenGL rendering context available.");
-            prerequisities_given = false;
-        }
-        if (glXGetCurrentContext == nullptr) {
-            megamol::core::utility::log::Log::DefaultLog.WriteError(
-                "[GUI] There is no current OpenGL rendering context available from the calling thread.");
-            prerequisities_given = false;
-        }
+        //if (glXGetCurrentDisplay == nullptr) {
+        //    megamol::core::utility::log::Log::DefaultLog.WriteError(
+        //        "[GUI] There is no OpenGL rendering context available.");
+        //    prerequisities_given = false;
+        //}
+        //if (glXGetCurrentContext == nullptr) {
+        //    megamol::core::utility::log::Log::DefaultLog.WriteError(
+        //        "[GUI] There is no current OpenGL rendering context available from the calling thread.");
+        //    prerequisities_given = false;
+        //}
 #endif // _WIN32
         if (!prerequisities_given) {
             megamol::core::utility::log::Log::DefaultLog.WriteError(

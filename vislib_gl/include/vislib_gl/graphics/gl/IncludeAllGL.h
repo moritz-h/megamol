@@ -11,7 +11,7 @@
 #undef max
 #include "glad/wgl.h"
 #else
-#include "glad/glx.h"
+//#include "glad/glx.h"
 #undef Status
 #endif
 
@@ -29,9 +29,9 @@ inline void LoadAllGL() {
 #ifdef _WIN32
         gladLoaderLoadWGL(wglGetCurrentDC());
 #else
-        Display* display = XOpenDisplay(NULL);
-        gladLoaderLoadGLX(display, DefaultScreen(display));
-        XCloseDisplay(display);
+        //Display* display = XOpenDisplay(NULL);
+        //gladLoaderLoadGLX(display, DefaultScreen(display));
+        //XCloseDisplay(display);
 #endif
     }
 }

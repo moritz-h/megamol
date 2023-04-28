@@ -11,6 +11,7 @@
 #pragma managed(push, off)
 #endif /* defined(_WIN32) && defined(_MANAGED) */
 
+#include <cstddef>
 #include <cstdint>
 
 #include "vislib_gl/graphics/gl/AbstractOpenGLTexture.h"
